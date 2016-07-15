@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.impress {
+  font-size: 3em !important;
+  font-weight: 800;
+  color: red !important;
+}
+.normal {
+  font-weight: normal;
+  font-color: darkgrey;
+}
+.boxed {
+  width: 600px;
+  border: 2px solid deepskyblue;
+  padding: 5px 25px;
+}

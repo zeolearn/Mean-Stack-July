@@ -1,0 +1,35 @@
+<div ng-app="kpmg" class="container container-fluid" ng-controller="FileUploadController">
+    <div class="boxed">
+        <label for="">Upload on form submit or button click</label>
+        <form name="form" role="form">
+            <div class="form-group">
+                <label for=""> Single Image with validations</label>
+                <div class="btn btn-default" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="20MB"
+                    ngf-min-height="100" ngf-resize="{width: 100, height: 100; border-width: 1px; border-color: blue;}">Select</div>
+            </div>
+            <div class="form-group">
+                <label for="">Multiple files</label>
+                <div class="btn btn-default" ngf-select ng-model="files" ngf-multiple="true">Select</div>
+            </div>
+            <div class="form-group">
+                <label for=""> Drop files:</label>
+                <div ngf-drop ng-model="files" class="drop-box">Drop here</div>
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="submit()">submit</button>
+        </form>
+    </div>
+
+
+    <label for="">Upload right away after file selection:</label>
+    <div class="button" ngf-select="upload($file)">Upload on file select</div>
+    <div class="button" ngf-select="uploadFiles($files)" multiple="multiple">Upload on file select</div>
+    <label for="">Drop File:</label>
+    <div ngf-drop="uploadFiles($files)" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-pattern="'image/*,application/pdf'">Drop Images or PDFs files here</div>
+    <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+
+    <label for="">Image thumbnail:</label> <img ngf-thumbnail="file || '/thumb.jpg'">
+    <label for="">Audio preview:</label>
+    <audio controls ngf-src="file"></audio>
+    <label for="">Video preview:</label>
+    <video controls ngf-src="file"></video>
+</div>

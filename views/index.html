@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="kpmg">
+
+<head>
+    <title>MEAN Stack Training by ZeoLearn</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
+    <script src="javascripts/plugin/angular-route.min.js"></script>
+    <script src="javascripts/plugin/FileAPI.min.js"></script>
+    <script src="javascripts/plugin/ng-file-upload-shim.min.js"></script>
+    <script src="javascripts/plugin/ng-file-upload.min.js"></script>
+    <link rel="stylesheet" type="" href="stylesheets/plugin/bootstrap.min.css">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/ng-file-upload.css" rel="stylesheet">
+</head>
+
+<body class="container container-fluid">
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a href="/">Data Feed</a></li>
+            <li><a href="/second">Dashboard</a></li>
+            <li><a href="/upload">File Upload</a></li>
+        </ul>
+    </nav>
+    <ng-view></ng-view>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/fileUpload.js"></script>
+</body>
+
+</html>

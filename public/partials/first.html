@@ -1,0 +1,32 @@
+<div class="container">
+    <!--<h1 ng-class="{impress: first.conditionIf(false), ok:first.conditionIf(true) === 'impress' }">{{first.title}}</h1>-->
+
+    <!--<ul>
+        <li ng-repeat="item in first.remoteDataList">{{item.id}}</li>
+    </ul>-->
+    <label for="">Upload audio file</label>
+    <input type="" name="" value="" ng-model="first.audioFileName">
+    <div>
+        <p>The File API</p>
+        <!--<div class="row well-spaced-row">
+                    <span class="filespan col-lg-1 col-md-1 col-sm-1">1. </span>
+                    <input class="col-lg-11 col-md-11 col-sm-11" type="file" name="imageFile" value="Image File" id="inputFile" onchange="handleSingleFile(event)">
+                    <output class="col-lg-12 col-md-12 col-sm-12" name="fileName" for="FileName" id="sFile"></output>
+                </div>-->
+        <!--<div class="row well-spaced-row">
+                    <span class="filespan col-lg-1 col-md-1 col-sm-1">2. </span>
+                    <input class="col-lg-11 col-md-11 col-sm-11" type="file" name="multiFile" value="Multiple Files" multiple onchange="handleFiles(event, this.files)"
+                        id="multiFiles">
+                    <output class="col-lg-12 col-md-12 col-sm-12" name="mFileNames" for="MultiFileNames" id="mFiles"></output>
+                </div>-->
+        <div class="row well-spaced-row">
+            <div class="col-lg-11 col-md-11 col-sm-11">
+                <input type="file" id="fileElem" multiple accept="" style="display:none" ng-model="fileList" onchange="angular.element(this).scope().handleFilesCustomElement(this)">
+                <a class="btn btn-danger" href="#" id="fileSelect" ng-click="first.fileSelect()">Select some files</a>
+                <p style="display: inline-block" id="fileNames">No file chosen</p>
+            </div>
+        </div>
+    </div>
+    <!--<label class="alert">Name: {{first.remoteData.name}} and Stream: {{first.remoteData.stream}}</label>-->
+
+</div>
