@@ -1,0 +1,16 @@
+Example Filter:
+
+<h3>Filter</h3>
+<div>
+    Enter a string:<input type="text" name="inputString" value="" ng-model="main.inputString">
+    <button class="btn btn-default" ng-click="main.runReverse()">Submit</button>
+    <div>
+        <span>Input: <label for="outputString">{{main.inputString}}</label></span>        
+    </div>
+    <div>
+        <span> Output Pipe: <label for="outputString">{{main.inputString | reverse | uppercase}}</label></span>            
+    </div>
+    <div>
+        <span> Output Method Call: <label for="outputString">{{main.outputString}}</label></span>    
+    </div>
+</div>
